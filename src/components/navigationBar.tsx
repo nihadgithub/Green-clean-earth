@@ -18,16 +18,21 @@ const Navigationbar = () => {
     },
     {
       id: 3,
+      name: "Dashboard",
+      link: "user-dash-home",
+    },
+    {
+      id: 4,
       name: "Login",
       link: "user-login",
     },
     {
-      id: 4,
+      id: 5,
       name: "User Register",
       link: "user-register",
     },
     {
-      id: 5,
+      id: 6,
       name: "Register",
       link: "register",
     },

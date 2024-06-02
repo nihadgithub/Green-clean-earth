@@ -14,7 +14,7 @@ export default function UserDashHome() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <Link 
             className="flex justify-start items-start gap-3 text-xl border rounded-xl shadow p-6 bg-white hover:bg-green-100 hover:shadow-md hover:border-green-600"
-            href={""}>
+            href={"/upload-plant"}>
             <div>
               <ImageUp size={48} color="#16a34a" strokeWidth={1.75} />
             </div>
