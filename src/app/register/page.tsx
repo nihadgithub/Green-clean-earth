@@ -37,6 +37,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import NavigationBar from "@/components/navigationBar";
 const formSchema = z.object({"category":z.string(),"name":z.string().max(255),"location":z.string().max(255),"coname":z.string().max(255),"wnumber":z.coerce.number(),"profession":z.string().max(255),"country":z.string(),"state":z.string(),"districts":z.string(),"lsgdzone":z.string().max(255),"username":z.string().max(255),"password":z.string().max(255)})
 
 const categories = [
@@ -69,11 +70,12 @@ password: "",
   }
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900">
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
-        <h1 className="flex items-center my-6 text-2xl font-bold text-green-600 dark:text-white">
+    <section className="bg-green-50 dark:bg-gray-900">
+      <NavigationBar />
+      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 mt-4">
+        {/* <h1 className="flex items-center my-6 text-2xl font-bold text-green-600 dark:text-white">
           GreenCleanEarth
-        </h1>
+        </h1> */}
       <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">

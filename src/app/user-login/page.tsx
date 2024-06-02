@@ -13,6 +13,8 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import NavigationBar from "@/components/navigationBar";
+
 const formSchema = z.object({"mobile":z.coerce.number().lte(9999999999),"password":z.string().min(1).max(255)})
 
 export default function UserLogin() {
@@ -29,11 +31,12 @@ export default function UserLogin() {
   }
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900">
-        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <h1 className="flex items-center mb-6 text-2xl font-bold text-green-600 dark:text-white">
+    <section className="bg-green-50 dark:bg-gray-900">
+        <NavigationBar />
+        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-[calc(100vh-74px)] lg:py-0">
+            {/* <h1 className="flex items-center mb-6 text-2xl font-bold text-green-600 dark:text-white">
                 GreenCleanEarth    
-            </h1>
+            </h1> */}
             <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
