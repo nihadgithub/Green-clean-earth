@@ -10,7 +10,7 @@ export default function UserDashHome() {
       <NavigationBar />
       
       <div className="container mx-auto md:max-w-5xl mt-4">
-        <h1 className="text-3xl my-4 font-bold">Dashboard</h1>
+        <h1 className="text-3xl my-4 font-bold mt-8">Dashboard</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <Link 
             className="flex justify-start items-start gap-3 text-xl border rounded-xl shadow p-6 bg-white hover:bg-green-100 hover:shadow-md hover:border-green-600"
@@ -39,7 +39,7 @@ export default function UserDashHome() {
 
           <Link 
             className="flex justify-start items-start gap-3 text-xl border rounded-xl shadow p-6 bg-white hover:bg-green-100 hover:shadow-md hover:border-green-600"
-            href={""}>
+            href={"my-page"}>
             <div>
               <SquareUserRound size={48} color="#16a34a" strokeWidth={1.75} />
             </div>

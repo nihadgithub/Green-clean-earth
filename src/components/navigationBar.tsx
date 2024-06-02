@@ -67,13 +67,13 @@ const Navigationbar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-white md:hidden"
+        className="cursor-pointer pr-4 z-20 text-white md:hidden "
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-green-600 text-white">
+        <ul className="z-10 flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-green-600 text-white">
           {links.map(({ id, name, link }) => (
             <li
               key={id}
