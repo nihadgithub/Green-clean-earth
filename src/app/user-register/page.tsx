@@ -36,6 +36,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import NavigationBar from "@/components/navigationBar";
+import Footer from "@/components/footer";
 const formSchema = z.object({"name":z.string().min(1).max(255),"email":z.string().email().max(255),"mobile":z.coerce.number().gte(1).lte(9999999999),"country":z.string(),"state":z.string(),"address":z.string(),"gender":z.string(),"password":z.string().max(255)})
 
 export default function UserRegister() {
@@ -231,6 +232,7 @@ export default function UserRegister() {
                 </div>
             </div>
         </div>
+        <Footer/>
     </section>
   )
 }

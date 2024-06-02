@@ -38,6 +38,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import NavigationBar from "@/components/navigationBar";
+import Footer from "@/components/footer";
 const formSchema = z.object({"category":z.string(),"name":z.string().max(255),"location":z.string().max(255),"coname":z.string().max(255),"wnumber":z.coerce.number(),"profession":z.string().max(255),"country":z.string(),"state":z.string(),"districts":z.string(),"lsgdzone":z.string().max(255),"username":z.string().max(255),"password":z.string().max(255)})
 
 const categories = [
@@ -357,6 +358,7 @@ password: "",
     </div>
       </div>
   </div>
+  <Footer/>
 </section>
   )
 }

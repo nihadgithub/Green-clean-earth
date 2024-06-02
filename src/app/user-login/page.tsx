@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import NavigationBar from "@/components/navigationBar";
+import Footer from "@/components/footer";
 
 const formSchema = z.object({"mobile":z.coerce.number().lte(9999999999),"password":z.string().min(1).max(255)})
 
@@ -84,6 +85,7 @@ export default function UserLogin() {
                 </div>
             </div>
         </div>
+        <Footer/>
     </section>
 
   )

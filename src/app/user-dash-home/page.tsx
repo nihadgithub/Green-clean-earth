@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/footer";
 import NavigationBar from "@/components/navigationBar";
 import { BadgeIndianRupee, CreditCard, FileText, Gift, ImageUp, Images, LogOut, Send, SquareUserRound, Trophy, UserRoundCog } from "lucide-react";
 import Link from 'next/link'
@@ -146,6 +147,7 @@ export default function UserDashHome() {
 
         </div>
       </div>
+      <Footer/>
     </div>
  )
 }
