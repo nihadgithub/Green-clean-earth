@@ -25,7 +25,7 @@ import NavigationBar from "@/components/navigationBar";
 import Footer from "@/components/footer";
 const formSchema = z.object({"name":z.string().min(1).max(255),"email":z.string().email().max(255),"mobile":z.coerce.number().gte(1).lte(9999999999),"country":z.string(),"state":z.string(),"address":z.string(),"gender":z.string(),"password":z.string().max(255)})
 
-export default function UserRegister() {
+export default function PromoterAdditionalDetails() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,13 +42,13 @@ export default function UserRegister() {
   }
 
   return (
-    <section className="bg-green-50 dark:bg-gray-900">
+    <section className="bg-green-50">
         <NavigationBar />
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 mt-8">
-            <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+            <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
                 <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                        Create user account
+                        Promoter - Additional details
                     </h1>
                     <Form {...form}>
                     <form noValidate onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
