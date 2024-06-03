@@ -74,7 +74,7 @@ export function FormUploadActivities() {
 
   return (
     <Form {...form}>
-      <form noValidate onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-2">
+      <form noValidate onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-2 h-[calc(80vh-50px)]">
              
                <FormField
                        control={form.control}

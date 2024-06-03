@@ -19,22 +19,22 @@ const Navigationbar = () => {
     {
       id: 3,
       name: "Dashboard",
-      link: "user-dash-home",
+      link: "/user-dash-home",
     },
     {
       id: 4,
       name: "Login",
-      link: "user-login",
+      link: "/user-login",
     },
     {
       id: 5,
       name: "User Register",
-      link: "user-register",
+      link: "/user-register",
     },
     {
       id: 6,
       name: "Register",
-      link: "register",
+      link: "/register",
     },
   ];
 
