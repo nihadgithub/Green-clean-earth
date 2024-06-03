@@ -39,7 +39,7 @@ import {
 } from "@/components/ui/select"
 import NavigationBar from "@/components/navigationBar";
 import Footer from "@/components/footer";
-const formSchema = z.object({"category":z.string(),"name":z.string().max(255),"location":z.string().max(255),"coname":z.string().max(255),"wnumber":z.coerce.number(),"profession":z.string().max(255),"country":z.string(),"state":z.string(),"districts":z.string(),"lsgdzone":z.string().max(255),"username":z.string().max(255),"password":z.string().max(255)})
+const formSchema = z.object({"category":z.string(),"name":z.string().max(255),"location":z.string().max(255),"coname":z.string().max(255),"wnumber":z.coerce.number(),"profession":z.string().max(255),"country":z.string(),"state":z.string(),"district":z.string(),"lsgdzone":z.string().max(255),"username":z.string().max(255),"password":z.string().max(255)})
 
 const categories = [
                     { label: "NGO", value: "ngo" },
@@ -55,14 +55,14 @@ export default function Register() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-name: "",
-location: "",
-coname: "",
-//wnumber: 0,
-profession: "",
-lsgdzone: "",
-username: "",
-password: "",
+// name: "",
+// location: "",
+// coname: "",
+// wnumber: 0,
+// profession: "",
+// lsgdzone: "",
+// username: "",
+// password: "",
 },
   })
 
@@ -83,7 +83,7 @@ password: "",
                   Create a group account
               </h1>
           <Form {...form}>
-            <form noValidate onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form  noValidate onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                   <FormField
                             control={form.control}
                             name="category"
@@ -225,7 +225,7 @@ password: "",
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                   <FormControl>
                                     <SelectTrigger>
-                                      <SelectValue placeholder="Choose a state" />
+                                      <SelectValue placeholder="Choose state" />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
@@ -239,8 +239,39 @@ password: "",
                                 <FormMessage />
                               </FormItem>
                             )}
+                          />  
+
+
+                          <FormField
+                            control={form.control}
+                            name="district"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>District</FormLabel>
+                                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                  <FormControl>
+                                    <SelectTrigger>
+                                      <SelectValue placeholder="Choose district" />
+                                    </SelectTrigger>
+                                  </FormControl>
+                                  <SelectContent>
+                                    <SelectItem value="kozhikode">Kozhikode</SelectItem>
+                                    <SelectItem value="malappuram ">Malappuram</SelectItem>
+                                    <SelectItem value="other">Other</SelectItem>
+                                  </SelectContent>
+                                </Select>
+                                <FormDescription>
+                                  
+                                </FormDescription>
+                                <FormMessage />
+                              </FormItem>
+                            )}
                           />             
-                  <FormField
+
+
+
+
+                  {/* <FormField
                             control={form.control}
                             name="districts"
                             render={({ field }) => (
@@ -300,7 +331,7 @@ password: "",
                                 <FormMessage />
                               </FormItem>
                             )}
-                          />
+                          /> */}
                                       
                   <FormField
                     control={form.control}
