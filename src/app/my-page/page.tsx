@@ -36,7 +36,7 @@ const MyPage = () => {
                   href="#link1"
                   role="tablist"
                 >
-                  <CircleUser size={36} strokeWidth={1.75} /> Profile
+                  <CircleUser size={28} strokeWidth={1.75} /> Profile
                 </a>
               </li>
               <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -55,7 +55,7 @@ const MyPage = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  <Images size={36} strokeWidth={1.75} /> My Uploads
+                  <Images size={28} strokeWidth={1.75} /> My Uploads
                 </a>
               </li>
               <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -74,7 +74,7 @@ const MyPage = () => {
                   href="#link3"
                   role="tablist"
                 >
-                  <List size={36} strokeWidth={1.75} />  Activities
+                  <List size={28} strokeWidth={1.75} />  Activities
                 </a>
               </li>
             </ul>
