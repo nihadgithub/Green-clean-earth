@@ -23,18 +23,12 @@ import {
 } from "@/components/ui/select"
 import NavigationBar from "@/components/navigationBar";
 import Footer from "@/components/footer";
-const formSchema = z.object({"name":z.string().min(1).max(255),"email":z.string().email().max(255),"mobile":z.coerce.number().gte(1).lte(9999999999),"country":z.string(),"state":z.string(),"address":z.string(),"gender":z.string(),"password":z.string().max(255)})
+const formSchema = z.object({"name":z.string().min(1).max(255),"email":z.string().email().max(255),"mobile":z.coerce.number().gte(1).lte(9999999999),"country":z.string(),"state":z.string(),"district":z.string(),"address":z.string(),"gender":z.string(),"password":z.string().max(255), "referralcode":z.string().min(1).max(255)})
 
 export default function UserRegister() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-//name: "string",
-//email: "string",
-//mobile: 1,
-//address: "",
-//password: "string",
-},
+    defaultValues: {},
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -153,6 +147,31 @@ export default function UserRegister() {
                                     )}
                                     />            
                             <FormField
+                                    control={form.control}
+                                    name="district"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                        <FormLabel>District</FormLabel>
+                                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                            <FormControl>
+                                            <SelectTrigger>
+                                                <SelectValue placeholder="" />
+                                            </SelectTrigger>
+                                            </FormControl>
+                                            <SelectContent>
+                                            <SelectItem value="malappuram">Malappuram</SelectItem>
+                                            <SelectItem value="calicut">Calicut</SelectItem>
+                                            </SelectContent>
+                                        </Select>
+                                        <FormDescription>
+                                        
+                                        </FormDescription>
+                                        <FormMessage />
+                                        </FormItem>
+                                    )}
+                                    />            
+
+                            <FormField
                             control={form.control}
                             name="address"
                             render={({ field }) => (
@@ -209,6 +228,24 @@ export default function UserRegister() {
                                 </FormItem>
                             )}
                             />
+
+                        <FormField
+                            control={form.control}
+                            name="referralcode"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormLabel>Referral Code</FormLabel>
+                                <FormControl>
+                                    <Input  placeholder="" {...field} />
+                                </FormControl>
+                                <FormDescription>
+                                    
+                                </FormDescription>
+                                <FormMessage />
+                                </FormItem>
+                            )}
+                            />
+
                         <Button type="submit" className="bg-green-600">Submit</Button>
                     </form>
                     </Form>
