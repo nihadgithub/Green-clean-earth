@@ -12,7 +12,7 @@ const MyPage = () => {
     return (
       <div className="bg-green-50">
         <Navigationbar />
-        <div className="container mx-auto md:max-w-5xl mt-4">
+        <div className="container mx-auto md:max-w-5xl mt-4 min-h-screen">
         <h1 className="text-3xl my-4 font-bold mt-8">My Page</h1>
         <div className="flex flex-wrap">
           <div className="w-full">
