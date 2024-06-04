@@ -22,17 +22,22 @@ const Navigationbar = () => {
       link: "/user-dash-home",
     },
     {
-      id: 4,
+      id:4,
+      name:"Participant list",
+      link:"/participant-list"
+    },
+    {
+      id: 5,
       name: "Login",
       link: "/user-login",
     },
     {
-      id: 5,
+      id: 6,
       name: "User Register",
       link: "/user-register",
     },
     {
-      id: 6,
+      id: 7,
       name: "Register",
       link: "/register",
     },
