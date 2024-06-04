@@ -16,9 +16,9 @@ import { Input } from "@/components/ui/input"
 import NavigationBar from "@/components/navigationBar";
 import Footer from "@/components/footer";
 
-const formSchema = z.object({"mobile":z.coerce.number().lte(9999999999),"password":z.string().min(1).max(255)})
+const formSchema = z.object({"username":z.string().min(3).max(255),"password":z.string().min(1).max(255)})
 
-export default function UserLogin() {
+export default function CoordinatorLogin() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,19 +41,19 @@ export default function UserLogin() {
             <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                        Login in to your account
+                        Login in to coordinator account
                     </h1>
                     <Form {...form}>
                     <form noValidate onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                             
                             <FormField
                             control={form.control}
-                            name="mobile"
+                            name="username"
                             render={({ field }) => (
                                 <FormItem>
-                                <FormLabel>Mobile</FormLabel>
+                                <FormLabel>Username</FormLabel>
                                 <FormControl>
-                                    <Input type="number" placeholder="" {...field} />
+                                    <Input placeholder="" {...field} />
                                 </FormControl>
                                 <FormDescription>
                                     
@@ -70,7 +70,7 @@ export default function UserLogin() {
                                 <FormItem>
                                 <FormLabel>Password</FormLabel>
                                 <FormControl>
-                                    <Input  placeholder="" {...field} />
+                                    <Input type="password" placeholder="" {...field} />
                                 </FormControl>
                                 <FormDescription>
                                     

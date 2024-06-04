@@ -374,7 +374,7 @@ export default function Register() {
                       <FormItem>
                         <FormLabel>Password</FormLabel>
                         <FormControl>
-                          <Input  {...field} />
+                          <Input type="password" {...field} />
                         </FormControl>
                         <FormDescription>
                           
